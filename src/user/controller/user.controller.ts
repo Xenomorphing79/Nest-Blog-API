@@ -58,6 +58,8 @@ export class UserController {
     return this.userService.updateOne(Number(id), user);
   }
 
+  @hasRoles(UserRole.ADMIN)
+  @UseGuards(JwtAuthGuard, RolesGuard)
   @Put(':id/role')
   updateRoleOfUser(
     @Param('id') id: string,

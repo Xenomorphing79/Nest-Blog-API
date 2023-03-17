@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "nest blog",
-    "dateExported": "2023-03-16T14:16:20.140Z",
+    "dateExported": "2023-03-17T17:34:39.087Z",
     "version": "1.1",
     "folders": [
         {
@@ -9,7 +9,8 @@
             "name": "users",
             "containerId": "",
             "created": "2023-03-15T18:13:43.356Z",
-            "sortNum": 10000
+            "sortNum": 10000,
+            "settings": {}
         }
     ],
     "requests": [
@@ -22,12 +23,12 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-03-15T18:07:52.845Z",
-            "modified": "2023-03-16T11:44:03.231Z",
+            "modified": "2023-03-17T17:31:21.331Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"Test User\",\n  \"userName\": \"UserName14789\", \n  \"email\": \"test1@abcd.com\",\n  \"password\": \"1234\"\n}",
+                "raw": "{\n  \"name\": \"Test User\",\n  \"userName\": \"UserName3\", \n  \"email\": \"test3@abcd.com\",\n  \"password\": \"1234\",\n  \"role\":\"user\"\n}",
                 "form": []
             },
             "tests": []
@@ -41,9 +42,13 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-03-15T18:11:13.571Z",
-            "modified": "2023-03-15T18:13:46.261Z",
+            "modified": "2023-03-17T13:44:52.853Z",
             "headers": [],
             "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIiwidXNlck5hbWUiOiJVc2VyTmFtZTEiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY3OTA2MDY2OCwiZXhwIjoxNjgxNjUyNjY4fQ.uG7DcceB3e3O_18fqfeEJVh-_a7aYx-f9X9Z4YjPDkY"
+            },
             "tests": []
         },
         {
@@ -65,11 +70,11 @@
             "colId": "a85f44e8-2c60-4ded-b2c8-c6fb225774a2",
             "containerId": "1507e566-97ed-44e3-8be4-2787c614afd2",
             "name": "delete user",
-            "url": "http://localhost:3000/user/1",
+            "url": "http://localhost:3000/user/2",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2023-03-15T18:12:43.235Z",
-            "modified": "2023-03-15T18:13:47.741Z",
+            "modified": "2023-03-16T14:22:02.041Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -109,6 +114,29 @@
                 "type": "json",
                 "raw": "{\n  \"email\": \"test1@abcd.com\",\n  \"password\": \"1234\"\n}",
                 "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "145517c6-1fd0-4d25-8c92-7e686b1dde62",
+            "colId": "a85f44e8-2c60-4ded-b2c8-c6fb225774a2",
+            "containerId": "1507e566-97ed-44e3-8be4-2787c614afd2",
+            "name": "update role",
+            "url": "http://localhost:3000/user/3/role",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2023-03-17T17:26:24.003Z",
+            "modified": "2023-03-17T17:31:35.600Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"role\": \"editor\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIiwidXNlck5hbWUiOiJVc2VyTmFtZTEiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY3OTA3NDIwMywiZXhwIjoxNjgxNjY2MjAzfQ.mD6eViS5uHhtFl-NPolhQWjc0kC-wGmqTUVGz1KgOs0"
             },
             "tests": []
         }
