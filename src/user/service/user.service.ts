@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { error } from 'console';
 import { catchError, from, map, Observable, switchMap, throwError } from 'rxjs';
 import { AuthService } from 'src/auth/services/auth.service';
-import { Repository } from 'typeorm';
+import { Like, Repository } from 'typeorm';
 import { UserEntity } from '../models/user.entity';
 import { User, UserRole } from '../models/user.interface';
 import { paginate, Pagination } from 'nestjs-typeorm-paginate';
@@ -52,6 +52,51 @@ export class UserService {
         usersPageable.items.forEach(function (v) {
           delete v.password;
         });
+        return usersPageable;
+      }),
+    );
+  }
+
+  paginateUsername(
+    options: IPaginationOptions,
+    user: User,
+  ): Observable<Pagination<User>> {
+    return from(
+      this.userRepository.findAndCount({
+        skip: Number(options.page) * Number(options.limit) || 0,
+        take: Number(options.limit) || 10,
+        order: { id: 'ASC' },
+        select: ['id', 'emailLowercase', 'name', 'role', 'userName'],
+        where: [
+          {
+            userName: Like(`%${user.userName}%`),
+          },
+        ],
+      }),
+    ).pipe(
+      map(([users, totalUsers]) => {
+        const usersPageable: Pagination<User> = {
+          items: users,
+          links: {
+            first: options.route + `?limit=${options.limit}`,
+            previous: options.route + ``,
+            next:
+              options.route +
+              `?limit=${options.limit}&page=${Number(options.page) + 1}`,
+            last:
+              options.route +
+              `?limit=${options.limit}&page=${Math.ceil(
+                totalUsers / Number(options.limit),
+              )}`,
+          },
+          meta: {
+            currentPage: Number(options.page),
+            itemCount: users.length,
+            itemsPerPage: Number(options.limit),
+            totalItems: totalUsers,
+            totalPages: Math.ceil(totalUsers / Number(options.limit)),
+          },
+        };
         return usersPageable;
       }),
     );
