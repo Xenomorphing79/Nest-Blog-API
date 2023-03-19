@@ -10,14 +10,35 @@ import {
   Put,
   UseGuards,
   Query,
+  UseInterceptors,
+  UploadedFile,
+  Request,
+  Res,
 } from '@nestjs/common';
+import * as path from 'path';
+import { FileInterceptor } from '@nestjs/platform-express';
+import { diskStorage } from 'multer';
 import { Pagination } from 'nestjs-typeorm-paginate/dist/pagination';
-import { catchError, map, Observable, of } from 'rxjs';
+import { catchError, map, Observable, of, tap } from 'rxjs';
 import { hasRoles } from 'src/auth/decorator/roles.decorator';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-guard';
 import { RolesGuard } from 'src/auth/guards/roles.guard';
 import { User, UserRole } from '../models/user.interface';
 import { UserService } from '../service/user.service';
+import { v4 as uuidv4 } from 'uuid';
+import { join } from 'path';
+
+export const storage = {
+  storage: diskStorage({
+    destination: './uploads/profileImages',
+    filename: (req, file, cb) => {
+      const filename: string =
+        path.parse(file.originalname).name.replace(/\s/g, '') + uuidv4();
+      const extension: string = path.parse(file.originalname).ext;
+      cb(null, `${filename}${extension}`);
+    },
+  }),
+};
 
 @Controller('user')
 export class UserController {
@@ -52,7 +73,6 @@ export class UserController {
     @Query('userName') userName: string,
   ): Observable<Pagination<User>> {
     limit = limit > 100 ? 100 : limit;
-    // console.log(username);
     if (userName === null || userName === undefined) {
       return this.userService.paginate({
         page: Number(page),
@@ -88,5 +108,30 @@ export class UserController {
     @Body() user: User,
   ): Observable<User> {
     return this.userService.updateRoleOfUser(Number(id), user);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('upload')
+  @UseInterceptors(FileInterceptor('file', storage))
+  uploadFile(@UploadedFile() file, @Request() req): Observable<Object> {
+    const user: User = req.user.user;
+    return this.userService
+      .updateOne(user.id, { profileImage: file.filename })
+      .pipe(
+        tap((user: User) => console.log(user)),
+        map((user: User) => ({
+          profileImage: user.profileImage,
+        })),
+      );
+  }
+
+  @Get('profile-image/:imagename')
+  findProfileImage(
+    @Param('imagename') imagename,
+    @Res() res,
+  ): Observable<Object> {
+    return of(
+      res.sendFile(join(process.cwd(), 'uploads/profileImages/' + imagename)),
+    );
   }
 }

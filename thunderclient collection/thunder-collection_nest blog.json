@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "nest blog",
-    "dateExported": "2023-03-17T17:34:39.087Z",
+    "dateExported": "2023-03-18T19:19:56.392Z",
     "version": "1.1",
     "folders": [
         {
@@ -38,13 +38,24 @@
             "colId": "a85f44e8-2c60-4ded-b2c8-c6fb225774a2",
             "containerId": "1507e566-97ed-44e3-8be4-2787c614afd2",
             "name": "get users",
-            "url": "http://localhost:3000/user",
+            "url": "http://localhost:3000/user?username=UserName1&limit=2",
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-03-15T18:11:13.571Z",
-            "modified": "2023-03-17T13:44:52.853Z",
+            "modified": "2023-03-18T19:17:32.502Z",
             "headers": [],
-            "params": [],
+            "params": [
+                {
+                    "name": "username",
+                    "value": "UserName1",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
             "auth": {
                 "type": "bearer",
                 "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIiwidXNlck5hbWUiOiJVc2VyTmFtZTEiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY3OTA2MDY2OCwiZXhwIjoxNjgxNjUyNjY4fQ.uG7DcceB3e3O_18fqfeEJVh-_a7aYx-f9X9Z4YjPDkY"
