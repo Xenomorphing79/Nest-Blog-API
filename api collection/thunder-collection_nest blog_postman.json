@@ -265,6 +265,106 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "blog",
+            "item": [
+                {
+                    "name": "create blog",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:3000/blogs",
+                            "path": [
+                                "blogs"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\":\"test\",\n  \"description\":\"test\",\n  \"body\":\"body\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlSW1hZ2UiOm51bGx9LCJpYXQiOjE2NzkzMzA5NjEsImV4cCI6MTY4MTkyMjk2MX0.YkiR9V0oZB2GAJGqWAs39lmZRS7-3rWdHfN8bJkfkKE",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get blogs",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/blogs",
+                            "path": [
+                                "blogs"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                },
+                {
+                    "name": "blogs by user",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/blogs?userId=1",
+                            "query": [
+                                {
+                                    "key": "userId",
+                                    "value": "1"
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "blogs"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                },
+                {
+                    "name": "find one blog",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/blogs/1",
+                            "path": [
+                                "blogs",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                }
+            ]
         }
     ]
 }

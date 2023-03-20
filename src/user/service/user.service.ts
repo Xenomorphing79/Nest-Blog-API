@@ -108,6 +108,7 @@ export class UserService {
         where: {
           id: id,
         },
+        relations: ['blogEntries'],
       }),
     ).pipe(
       map((user: User) => {
