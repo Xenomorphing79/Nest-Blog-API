@@ -1,0 +1,270 @@
+{
+    "info": {
+        "name": "nest blog",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "users",
+            "item": [
+                {
+                    "name": "new user",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:3000/user",
+                            "path": [
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"name\": \"Test User 1\",\n  \"userName\": \"UserName1\", \n  \"email\": \"test1@abcd.com\",\n  \"password\": \"1234\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "get users",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/user",
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "3",
+                                    "disabled": true
+                                }
+                            ],
+                            "variable": [],
+                            "path": [
+                                "user"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIiwidXNlck5hbWUiOiJVc2VyTmFtZTEiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY3OTA2MDY2OCwiZXhwIjoxNjgxNjUyNjY4fQ.uG7DcceB3e3O_18fqfeEJVh-_a7aYx-f9X9Z4YjPDkY",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "find one user",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/user/1",
+                            "path": [
+                                "user",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                },
+                {
+                    "name": "delete user",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:3000/user/2",
+                            "path": [
+                                "user",
+                                "2"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                },
+                {
+                    "name": "update user",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:3000/user/1",
+                            "path": [
+                                "user",
+                                "1"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"id\": 1,\n    \"name\": \"Test User Updated\",\n    \"userName\": \"Updated Username\"\n  }"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIDEiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMSIsImVtYWlsIjoidGVzdDFAYWJjZC5jb20iLCJyb2xlIjoidXNlciIsInByb2ZpbGVJbWFnZSI6bnVsbH0sImlhdCI6MTY3OTIzNTI4NSwiZXhwIjoxNjgxODI3Mjg1fQ.rd4ga3XKSbCyHQSuBfkP42wBuzE6iWzYOOxeCkbO_eU",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:3000/user/login",
+                            "path": [
+                                "user",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\": \"test1@abcd.com\",\n  \"password\": \"1234\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "update role",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:3000/user/3/role",
+                            "path": [
+                                "user",
+                                "3",
+                                "role"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"role\": \"editor\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIiwidXNlck5hbWUiOiJVc2VyTmFtZTEiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY3OTA3NDIwMywiZXhwIjoxNjgxNjY2MjAzfQ.mD6eViS5uHhtFl-NPolhQWjc0kC-wGmqTUVGz1KgOs0",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "image upload",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:3000/user/upload",
+                            "path": [
+                                "user",
+                                "upload"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "file",
+                                    "src": "c:\\Users\\MY PC\\Downloads\\icons 8 - customer - 50.png",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJuYW1lIjoiVGVzdCBVc2VyIDIiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMiIsImVtYWlsIjoidGVzdDJAYWJjZC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE2NzkyMTE1NTAsImV4cCI6MTY4MTgwMzU1MH0.q8ziN053JI5YxO52F4BaunfkpfmlE29y_MCdKKSvcuY",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get image",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/user/profile-image/icons8-customer-50a2312973-3c81-4c2b-9c25-0e3591846125.png",
+                            "path": [
+                                "user",
+                                "profile-image",
+                                "icons8-customer-50a2312973-3c81-4c2b-9c25-0e3591846125.png"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
