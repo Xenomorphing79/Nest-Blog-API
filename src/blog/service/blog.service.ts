@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { from, map, Observable, of, switchMap } from 'rxjs';
+import { from, map, Observable, of, switchMap, tap } from 'rxjs';
 import slugify from 'slugify';
 import { User } from 'src/user/models/user.interface';
 import { UserService } from 'src/user/service/user.service';
@@ -55,6 +55,16 @@ export class BlogService {
         relations: ['author'],
       }),
     ).pipe(map((blogEntries: blogEntry[]) => blogEntries));
+  }
+
+  updateOne(id: number, blogEntry: blogEntry): Observable<blogEntry> {
+    return from(this.blogRepository.update(id, blogEntry)).pipe(
+      switchMap(() => this.findOne(id)),
+    );
+  }
+
+  deleteOne(id: number): Observable<any> {
+    return from(this.blogRepository.delete(id));
   }
 
   generateSlug(title: string): Observable<string> {

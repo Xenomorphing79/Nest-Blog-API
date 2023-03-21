@@ -1,4 +1,10 @@
-import { CanActivate, ExecutionContext, forwardRef, Inject, Injectable } from '@nestjs/common';
+import {
+  CanActivate,
+  ExecutionContext,
+  forwardRef,
+  Inject,
+  Injectable,
+} from '@nestjs/common';
 import { map, Observable } from 'rxjs';
 import { User } from 'src/user/models/user.interface';
 import { UserService } from 'src/user/service/user.service';
@@ -10,19 +16,21 @@ export class UserGuard implements CanActivate {
     private userService: UserService,
   ) {}
 
-  canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
+  canActivate(
+    context: ExecutionContext,
+  ): boolean | Promise<boolean> | Observable<boolean> {
     const http = context.switchToHttp();
     const request = http.getRequest();
-    const user: User = request.user.user
+    const user: User = request.user;
     const params = request.params;
     return this.userService.findOne(user.id).pipe(
       map((user: User) => {
         let hasPermission = false;
-        if(user.id === Number(params.id)) {
+        if (user.id === Number(params.id)) {
           hasPermission = true;
         }
         return user && hasPermission;
-      })
+      }),
     );
   }
 }
