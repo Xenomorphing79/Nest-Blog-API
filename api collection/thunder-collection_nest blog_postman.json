@@ -30,7 +30,7 @@
                                     "language": "json"
                                 }
                             },
-                            "raw": "{\n  \"name\": \"Test User 1\",\n  \"userName\": \"UserName1\", \n  \"email\": \"test1@abcd.com\",\n  \"password\": \"1234\"\n}"
+                            "raw": "{\n  \"name\": \"Test User 3\",\n  \"userName\": \"UserName3\", \n  \"email\": \"test3@abcd.com\",\n  \"password\": \"1234\"\n}"
                         }
                     }
                 },
@@ -92,16 +92,26 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "http://localhost:3000/user/2",
+                            "raw": "http://localhost:3000/user/3",
                             "path": [
                                 "user",
-                                "2"
+                                "3"
                             ],
                             "protocol": "http",
                             "host": [
                                 "localhost"
                             ],
                             "port": "3000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIDMiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMyIsImVtYWlsIjoidGVzdDNAYWJjZC5jb20iLCJyb2xlIjoidXNlciIsInByb2ZpbGVJbWFnZSI6bnVsbH0sImlhdCI6MTY3OTQwNjg2NiwiZXhwIjoxNjgxOTk4ODY2fQ.7QEK330SHKO3Je_Lny9gQCwIjLovOI8Or6dHEOtPLyk",
+                                    "type": "string"
+                                }
+                            ]
                         }
                     }
                 },
@@ -274,9 +284,9 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://localhost:3000/blogs",
+                            "raw": "http://localhost:3000/blog-entries",
                             "path": [
-                                "blogs"
+                                "blog-entries"
                             ],
                             "protocol": "http",
                             "host": [
@@ -310,9 +320,9 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/blogs",
+                            "raw": "http://localhost:3000/blog-entries",
                             "path": [
-                                "blogs"
+                                "blog-entries"
                             ],
                             "protocol": "http",
                             "host": [
@@ -327,7 +337,7 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/blogs?userId=1",
+                            "raw": "http://localhost:3000/blog-entries?userId=1",
                             "query": [
                                 {
                                     "key": "userId",
@@ -336,7 +346,7 @@
                             ],
                             "variable": [],
                             "path": [
-                                "blogs"
+                                "blog-entries"
                             ],
                             "protocol": "http",
                             "host": [
@@ -351,9 +361,93 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/blogs/1",
+                            "raw": "http://localhost:3000/blog-entries/2",
                             "path": [
-                                "blogs",
+                                "blog-entries",
+                                "2"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        }
+                    }
+                },
+                {
+                    "name": "update blog",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:3000/blog-entries/2",
+                            "path": [
+                                "blog-entries",
+                                "2"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\": \"updated title\"\n}"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjpudWxsfSwiaWF0IjoxNjc5NDA3NTQzLCJleHAiOjE2ODE5OTk1NDN9.24rp-ft6IHzEOfzqRQmCdjquzbWL59Bh6BjsVWOrVJ8",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "delete blog",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:3000/blog-entries/3",
+                            "path": [
+                                "blog-entries",
+                                "3"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000"
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjpudWxsfSwiaWF0IjoxNjc5NDA3NTQzLCJleHAiOjE2ODE5OTk1NDN9.24rp-ft6IHzEOfzqRQmCdjquzbWL59Bh6BjsVWOrVJ8",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "blogs by userid",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:3000/blog-entries/user/1",
+                            "path": [
+                                "blog-entries",
+                                "user",
                                 "1"
                             ],
                             "protocol": "http",

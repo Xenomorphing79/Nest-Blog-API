@@ -1,10 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import {
+  IPaginationOptions,
+  paginate,
+  Pagination,
+} from 'nestjs-typeorm-paginate';
 import { from, map, Observable, of, switchMap, tap } from 'rxjs';
 import slugify from 'slugify';
 import { User } from 'src/user/models/user.interface';
 import { UserService } from 'src/user/service/user.service';
 import { Repository } from 'typeorm';
+import { Equal } from 'typeorm/find-options/operator/Equal';
 import { blogEntryEntity } from '../models/blogEntry.entity';
 import { blogEntry } from '../models/blogEntry.interface';
 
@@ -31,6 +37,26 @@ export class BlogService {
         relations: ['author'],
       }),
     );
+  }
+
+  paginateAll(options: IPaginationOptions): Observable<Pagination<blogEntry>> {
+    return from(
+      paginate<blogEntry>(this.blogRepository, options, {
+        relations: ['author'],
+      }),
+    ).pipe(map((blogEntries: Pagination<blogEntry>) => blogEntries));
+  }
+
+  paginateByUser(
+    options: IPaginationOptions,
+    userId: number,
+  ): Observable<Pagination<blogEntry>> {
+    return from(
+      paginate<blogEntry>(this.blogRepository, options, {
+        relations: ['author'],
+        where: [{ author: Equal(userId) }],
+      }),
+    ).pipe(map((blogEntries: Pagination<blogEntry>) => blogEntries));
   }
 
   findOne(id: number): Observable<blogEntry> {
