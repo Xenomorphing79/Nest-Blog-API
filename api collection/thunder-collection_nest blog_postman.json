@@ -13,15 +13,17 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://localhost:3000/user",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user",
                             "path": [
                                 "user"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "body": {
                             "mode": "raw",
@@ -30,7 +32,7 @@
                                     "language": "json"
                                 }
                             },
-                            "raw": "{\n  \"name\": \"Test User 3\",\n  \"userName\": \"UserName3\", \n  \"email\": \"test3@abcd.com\",\n  \"password\": \"1234\"\n}"
+                            "raw": "{\n  \"name\": \"Test User 2\",\n  \"userName\": \"UserName2\",\n  \"email\": \"test2@abcd.com\",\n  \"password\": \"1234\",\n  \"role\": \"admin\"\n}"
                         }
                     }
                 },
@@ -39,7 +41,7 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/user",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user",
                             "query": [
                                 {
                                     "key": "limit",
@@ -51,11 +53,13 @@
                             "path": [
                                 "user"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "auth": {
                             "type": "bearer",
@@ -74,16 +78,18 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/user/1",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user/1",
                             "path": [
                                 "user",
                                 "1"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         }
                     }
                 },
@@ -92,23 +98,25 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "http://localhost:3000/user/3",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user/2",
                             "path": [
                                 "user",
-                                "3"
+                                "2"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "auth": {
                             "type": "bearer",
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIDMiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMyIsImVtYWlsIjoidGVzdDNAYWJjZC5jb20iLCJyb2xlIjoidXNlciIsInByb2ZpbGVJbWFnZSI6bnVsbH0sImlhdCI6MTY3OTQwNjg2NiwiZXhwIjoxNjgxOTk4ODY2fQ.7QEK330SHKO3Je_Lny9gQCwIjLovOI8Or6dHEOtPLyk",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJuYW1lIjoiVGVzdCBVc2VyIDIiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMiIsImVtYWlsIjoidGVzdDJAYWJjZC5jb20iLCJyb2xlIjoidXNlciIsInByb2ZpbGVJbWFnZSI6bnVsbH0sImlhdCI6MTY3OTU3NzU5NSwiZXhwIjoxNjgyMTY5NTk1fQ.B-UykSgGWqbuKDZPOxd6sJvfcfYPv6OyTYNMzPJJ60o",
                                     "type": "string"
                                 }
                             ]
@@ -120,16 +128,18 @@
                     "request": {
                         "method": "PUT",
                         "url": {
-                            "raw": "http://localhost:3000/user/1",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user/3",
                             "path": [
                                 "user",
-                                "1"
+                                "3"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "body": {
                             "mode": "raw",
@@ -138,14 +148,14 @@
                                     "language": "json"
                                 }
                             },
-                            "raw": "{\n    \"id\": 1,\n    \"name\": \"Test User Updated\",\n    \"userName\": \"Updated Username\"\n  }"
+                            "raw": "{\n    \"id\": 3,\n    \"name\": \"Test User Updated\",\n    \"userName\": \"Updated Username\"\n  }"
                         },
                         "auth": {
                             "type": "bearer",
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIDEiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMSIsImVtYWlsIjoidGVzdDFAYWJjZC5jb20iLCJyb2xlIjoidXNlciIsInByb2ZpbGVJbWFnZSI6bnVsbH0sImlhdCI6MTY3OTIzNTI4NSwiZXhwIjoxNjgxODI3Mjg1fQ.rd4ga3XKSbCyHQSuBfkP42wBuzE6iWzYOOxeCkbO_eU",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIDIiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMiIsImVtYWlsIjoidGVzdDJAYWJjZC5jb20iLCJyb2xlIjoiYWRtaW4iLCJwcm9maWxlSW1hZ2UiOm51bGx9LCJpYXQiOjE2Nzk1Nzc3NjcsImV4cCI6MTY4MjE2OTc2N30.c-eAtSU48DHb-dVo2dxCAUpjmozRrNH8PtAXO8FuVQs",
                                     "type": "string"
                                 }
                             ]
@@ -157,16 +167,18 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://localhost:3000/user/login",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user/login",
                             "path": [
                                 "user",
                                 "login"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "body": {
                             "mode": "raw",
@@ -175,7 +187,7 @@
                                     "language": "json"
                                 }
                             },
-                            "raw": "{\n  \"email\": \"test1@abcd.com\",\n  \"password\": \"1234\"\n}"
+                            "raw": "{\n  \"email\": \"test2@abcd.com\",\n  \"password\": \"1234\"\n}"
                         }
                     }
                 },
@@ -184,17 +196,19 @@
                     "request": {
                         "method": "PUT",
                         "url": {
-                            "raw": "http://localhost:3000/user/3/role",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user/3/role",
                             "path": [
                                 "user",
                                 "3",
                                 "role"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "body": {
                             "mode": "raw",
@@ -210,7 +224,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIiwidXNlck5hbWUiOiJVc2VyTmFtZTEiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY3OTA3NDIwMywiZXhwIjoxNjgxNjY2MjAzfQ.mD6eViS5uHhtFl-NPolhQWjc0kC-wGmqTUVGz1KgOs0",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIDIiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMiIsImVtYWlsIjoidGVzdDJAYWJjZC5jb20iLCJyb2xlIjoiYWRtaW4iLCJwcm9maWxlSW1hZ2UiOm51bGx9LCJpYXQiOjE2Nzk1Nzc3NjcsImV4cCI6MTY4MjE2OTc2N30.c-eAtSU48DHb-dVo2dxCAUpjmozRrNH8PtAXO8FuVQs",
                                     "type": "string"
                                 }
                             ]
@@ -222,16 +236,18 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://localhost:3000/user/upload",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user/upload",
                             "path": [
                                 "user",
                                 "upload"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "body": {
                             "mode": "formdata",
@@ -248,7 +264,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJuYW1lIjoiVGVzdCBVc2VyIDIiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMiIsImVtYWlsIjoidGVzdDJAYWJjZC5jb20iLCJyb2xlIjoidXNlciJ9LCJpYXQiOjE2NzkyMTE1NTAsImV4cCI6MTY4MTgwMzU1MH0.q8ziN053JI5YxO52F4BaunfkpfmlE29y_MCdKKSvcuY",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIDIiLCJ1c2VyTmFtZSI6IlVzZXJOYW1lMiIsImVtYWlsIjoidGVzdDJAYWJjZC5jb20iLCJyb2xlIjoiYWRtaW4iLCJwcm9maWxlSW1hZ2UiOm51bGx9LCJpYXQiOjE2Nzk1Nzc3NjcsImV4cCI6MTY4MjE2OTc2N30.c-eAtSU48DHb-dVo2dxCAUpjmozRrNH8PtAXO8FuVQs",
                                     "type": "string"
                                 }
                             ]
@@ -260,17 +276,19 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/user/profile-image/icons8-customer-50a2312973-3c81-4c2b-9c25-0e3591846125.png",
+                            "raw": "https://nest-blog-api-production.up.railway.app/user/profile-image/icons8-customer-5024ea6b20-c8ba-4d8c-b294-24d4dab3a29d.png",
                             "path": [
                                 "user",
                                 "profile-image",
-                                "icons8-customer-50a2312973-3c81-4c2b-9c25-0e3591846125.png"
+                                "icons8-customer-5024ea6b20-c8ba-4d8c-b294-24d4dab3a29d.png"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         }
                     }
                 }
@@ -284,15 +302,17 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "http://localhost:3000/blog-entries",
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries",
                             "path": [
                                 "blog-entries"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "body": {
                             "mode": "raw",
@@ -308,7 +328,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlSW1hZ2UiOm51bGx9LCJpYXQiOjE2NzkzMzA5NjEsImV4cCI6MTY4MTkyMjk2MX0.YkiR9V0oZB2GAJGqWAs39lmZRS7-3rWdHfN8bJkfkKE",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QyQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjoiaWNvbnM4LWN1c3RvbWVyLTUwMjRlYTZiMjAtYzhiYS00ZDhjLWIyOTQtMjRkNGRhYjNhMjlkLnBuZyJ9LCJpYXQiOjE2Nzk1NzgyNDYsImV4cCI6MTY4MjE3MDI0Nn0.xWkRZaIsy7JN-AmoJLUVLXyshLyc4tF5cnHMbE_4G3E",
                                     "type": "string"
                                 }
                             ]
@@ -320,15 +340,17 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/blog-entries",
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries",
                             "path": [
                                 "blog-entries"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         }
                     }
                 },
@@ -379,16 +401,18 @@
                     "request": {
                         "method": "PUT",
                         "url": {
-                            "raw": "http://localhost:3000/blog-entries/2",
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/2",
                             "path": [
                                 "blog-entries",
                                 "2"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "body": {
                             "mode": "raw",
@@ -404,7 +428,7 @@
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjpudWxsfSwiaWF0IjoxNjc5NDA3NTQzLCJleHAiOjE2ODE5OTk1NDN9.24rp-ft6IHzEOfzqRQmCdjquzbWL59Bh6BjsVWOrVJ8",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QyQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjoiaWNvbnM4LWN1c3RvbWVyLTUwMjRlYTZiMjAtYzhiYS00ZDhjLWIyOTQtMjRkNGRhYjNhMjlkLnBuZyJ9LCJpYXQiOjE2Nzk1NzgyNDYsImV4cCI6MTY4MjE3MDI0Nn0.xWkRZaIsy7JN-AmoJLUVLXyshLyc4tF5cnHMbE_4G3E",
                                     "type": "string"
                                 }
                             ]
@@ -416,23 +440,25 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "http://localhost:3000/blog-entries/3",
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/2",
                             "path": [
                                 "blog-entries",
-                                "3"
+                                "2"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         },
                         "auth": {
                             "type": "bearer",
                             "bearer": [
                                 {
                                     "key": "token",
-                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjpudWxsfSwiaWF0IjoxNjc5NDA3NTQzLCJleHAiOjE2ODE5OTk1NDN9.24rp-ft6IHzEOfzqRQmCdjquzbWL59Bh6BjsVWOrVJ8",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QyQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjoiaWNvbnM4LWN1c3RvbWVyLTUwMjRlYTZiMjAtYzhiYS00ZDhjLWIyOTQtMjRkNGRhYjNhMjlkLnBuZyJ9LCJpYXQiOjE2Nzk1NzgyNDYsImV4cCI6MTY4MjE3MDI0Nn0.xWkRZaIsy7JN-AmoJLUVLXyshLyc4tF5cnHMbE_4G3E",
                                     "type": "string"
                                 }
                             ]
@@ -444,17 +470,81 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/blog-entries/user/1",
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/user/1",
                             "path": [
                                 "blog-entries",
                                 "user",
                                 "1"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "image upload",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/image/upload",
+                            "path": [
+                                "blog-entries",
+                                "image",
+                                "upload"
                             ],
-                            "port": "3000"
+                            "protocol": "https",
+                            "host": [
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "file",
+                                    "src": "c:\\Users\\MY PC\\Downloads\\275485862_154127740344935_7514376992932210128_n.jpg",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiVGVzdCBVc2VyIFVwZGF0ZWQiLCJ1c2VyTmFtZSI6IlVwZGF0ZWQgVXNlcm5hbWUiLCJlbWFpbCI6InRlc3QxQGFiY2QuY29tIiwicm9sZSI6ImFkbWluIiwicHJvZmlsZUltYWdlIjpudWxsfSwiaWF0IjoxNjc5NTAwNzM4LCJleHAiOjE2ODIwOTI3Mzh9.3_Yqu_czUAxcNLQlqk8DoSsyTFoAM3dtoFvigqsAowI",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get image",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/image/275485862_154127740344935_7514376992932210128_ne955a5d5-0537-4829-8e26-a6aa58f2d713.jpg",
+                            "path": [
+                                "blog-entries",
+                                "image",
+                                "275485862_154127740344935_7514376992932210128_ne955a5d5-0537-4829-8e26-a6aa58f2d713.jpg"
+                            ],
+                            "protocol": "https",
+                            "host": [
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         }
                     }
                 }
