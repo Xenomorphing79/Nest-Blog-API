@@ -78,14 +78,14 @@ export class UserController {
       return this.userService.paginate({
         page: Number(page),
         limit: Number(limit),
-        route: 'http://localhost:3000/user',
+        route: 'https://nest-blog-api-production.up.railway.app/user',
       });
     }
     return this.userService.paginateUsername(
       {
         page: Number(page),
         limit: Number(limit),
-        route: 'http://localhost:3000/api/users',
+        route: 'https://nest-blog-api-production.up.railway.app/user',
       },
       { userName },
     );

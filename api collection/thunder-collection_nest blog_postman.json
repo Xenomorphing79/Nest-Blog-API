@@ -359,7 +359,7 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/blog-entries?userId=1",
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries?userId=1",
                             "query": [
                                 {
                                     "key": "userId",
@@ -370,11 +370,13 @@
                             "path": [
                                 "blog-entries"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         }
                     }
                 },
@@ -383,16 +385,18 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "http://localhost:3000/blog-entries/2",
+                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/2",
                             "path": [
                                 "blog-entries",
                                 "2"
                             ],
-                            "protocol": "http",
+                            "protocol": "https",
                             "host": [
-                                "localhost"
-                            ],
-                            "port": "3000"
+                                "nest-blog-api-production",
+                                "up",
+                                "railway",
+                                "app"
+                            ]
                         }
                     }
                 },

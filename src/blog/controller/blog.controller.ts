@@ -25,7 +25,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Image } from '../models/image.interface';
 import { join } from 'path';
 
-export const blogEntriesUrl = 'http://localhost:3000/blog-entries';
+export const blogEntriesUrl = 'https://nest-blog-api-production.up.railway.app//blog-entries';
 
 export const storage = {
   storage: diskStorage({
