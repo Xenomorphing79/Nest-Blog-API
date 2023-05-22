@@ -13,13 +13,13 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user",
+                            "raw": "https://winged-mass-production.up.railway.app/user",
                             "path": [
                                 "user"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -41,7 +41,7 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user",
+                            "raw": "https://winged-mass-production.up.railway.app/user",
                             "query": [
                                 {
                                     "key": "limit",
@@ -55,7 +55,7 @@
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -78,14 +78,14 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user/1",
+                            "raw": "https://winged-mass-production.up.railway.app/user/1",
                             "path": [
                                 "user",
                                 "1"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -98,14 +98,14 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user/2",
+                            "raw": "https://winged-mass-production.up.railway.app/user/2",
                             "path": [
                                 "user",
                                 "2"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -128,14 +128,14 @@
                     "request": {
                         "method": "PUT",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user/3",
+                            "raw": "https://winged-mass-production.up.railway.app/user/3",
                             "path": [
                                 "user",
                                 "3"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -167,14 +167,14 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user/login",
+                            "raw": "https://winged-mass-production.up.railway.app/user/login",
                             "path": [
                                 "user",
                                 "login"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -196,7 +196,7 @@
                     "request": {
                         "method": "PUT",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user/3/role",
+                            "raw": "https://winged-mass-production.up.railway.app/user/3/role",
                             "path": [
                                 "user",
                                 "3",
@@ -204,7 +204,7 @@
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -236,18 +236,15 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user/upload",
+                            "raw": "localhost:3000/user/upload",
                             "path": [
                                 "user",
                                 "upload"
                             ],
-                            "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
-                                "up",
-                                "railway",
-                                "app"
-                            ]
+                                "localhost"
+                            ],
+                            "port": "3000"
                         },
                         "body": {
                             "mode": "formdata",
@@ -276,19 +273,16 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/user/profile-image/icons8-customer-5024ea6b20-c8ba-4d8c-b294-24d4dab3a29d.png",
+                            "raw": "localhost:3000/user/profile-image/icons8-customer-5076357550-f7f6-4bf4-8326-ab2208a46b0d.png",
                             "path": [
                                 "user",
                                 "profile-image",
-                                "icons8-customer-5024ea6b20-c8ba-4d8c-b294-24d4dab3a29d.png"
+                                "icons8-customer-5076357550-f7f6-4bf4-8326-ab2208a46b0d.png"
                             ],
-                            "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
-                                "up",
-                                "railway",
-                                "app"
-                            ]
+                                "localhost"
+                            ],
+                            "port": "3000"
                         }
                     }
                 }
@@ -302,13 +296,13 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries",
+                            "raw": "https://winged-mass-production.up.railway.app/blog-entries",
                             "path": [
                                 "blog-entries"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -340,13 +334,13 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries",
+                            "raw": "https://winged-mass-production.up.railway.app/blog-entries",
                             "path": [
                                 "blog-entries"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -359,7 +353,7 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries?userId=1",
+                            "raw": "https://winged-mass-production.up.railway.app/blog-entries?userId=1",
                             "query": [
                                 {
                                     "key": "userId",
@@ -372,7 +366,7 @@
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -385,14 +379,14 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/2",
+                            "raw": "https://winged-mass-production.up.railway.app/blog-entries/2",
                             "path": [
                                 "blog-entries",
                                 "2"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -405,14 +399,14 @@
                     "request": {
                         "method": "PUT",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/2",
+                            "raw": "https://winged-mass-production.up.railway.app/blog-entries/2",
                             "path": [
                                 "blog-entries",
                                 "2"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -444,14 +438,14 @@
                     "request": {
                         "method": "DELETE",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/2",
+                            "raw": "https://winged-mass-production.up.railway.app/blog-entries/2",
                             "path": [
                                 "blog-entries",
                                 "2"
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -474,7 +468,7 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/user/1",
+                            "raw": "https://winged-mass-production.up.railway.app/blog-entries/user/1",
                             "path": [
                                 "blog-entries",
                                 "user",
@@ -482,7 +476,7 @@
                             ],
                             "protocol": "https",
                             "host": [
-                                "nest-blog-api-production",
+                                "winged-mass-production",
                                 "up",
                                 "railway",
                                 "app"
@@ -495,19 +489,17 @@
                     "request": {
                         "method": "POST",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/image/upload",
+                            "raw": "http://localhost:3000/blog-entries/image/upload",
                             "path": [
                                 "blog-entries",
                                 "image",
                                 "upload"
                             ],
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": [
-                                "nest-blog-api-production",
-                                "up",
-                                "railway",
-                                "app"
-                            ]
+                                "localhost"
+                            ],
+                            "port": "3000"
                         },
                         "body": {
                             "mode": "formdata",
@@ -536,19 +528,17 @@
                     "request": {
                         "method": "GET",
                         "url": {
-                            "raw": "https://nest-blog-api-production.up.railway.app/blog-entries/image/275485862_154127740344935_7514376992932210128_ne955a5d5-0537-4829-8e26-a6aa58f2d713.jpg",
+                            "raw": "http://localhost:3000/blog-entries/image/275485862_154127740344935_7514376992932210128_ne955a5d5-0537-4829-8e26-a6aa58f2d713.jpg",
                             "path": [
                                 "blog-entries",
                                 "image",
                                 "275485862_154127740344935_7514376992932210128_ne955a5d5-0537-4829-8e26-a6aa58f2d713.jpg"
                             ],
-                            "protocol": "https",
+                            "protocol": "http",
                             "host": [
-                                "nest-blog-api-production",
-                                "up",
-                                "railway",
-                                "app"
-                            ]
+                                "localhost"
+                            ],
+                            "port": "3000"
                         }
                     }
                 }
